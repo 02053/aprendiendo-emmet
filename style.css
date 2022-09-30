@@ -1,0 +1,108 @@
+:root {
+    --color-purple-dark: #181622;
+    --color-purple: #853BCE;
+    --color-purple-grey: #33323E;
+    --color-white: #ffffff;
+    --color-grey-400: #6c6b7b;
+    --color-grey-500: #878593;
+    --color-grey-600: #a1a0ab;
+    --color-grey-700: #c4c4ca;
+    --color-blue-700: #8caef2;
+    --background: hsl(250, 24%, 9%);
+    --color-grey-100: hsl(246, 18%, 15%);
+    --color-pink: hsl(270, 70%, 65%);
+    --color-pink-700: hsl(270, 70%, 75%);
+    --font: 'Roboto Mono', monospace;
+    --font-code: 'Mononoki', monospace;
+}
+
+@font-face {
+    font-family: Mononoki;
+    src: url("./assets/typografy/mononoki-Regular\ Nerd\ Font\ Complete\ Mono.ttf"),
+        url("./assets/typografy/mononoki-Regular\ Nerd\ Font\ Complete\ Mono\ Windows\ Compatible.ttf");
+    font-display: swap;
+}
+
+/* ********** Reset ********** */
+* {
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 16px;
+    font-family: var(--font);
+    color: var(--color-white);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background);
+}
+
+main {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+hr {
+    width: 5%;
+    color: var(--color-purple);
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-purple);
+}
+
+p {
+    color: var(--color-grey-600);
+}
+
+.text-primary {
+    color: var(--color-white);
+    font-size: 2.5rem;
+}
+
+h2 {
+    align-self: start;
+}
+
+section {
+    width: 100%;
+}
+
+section p{
+    align-self: start;
+}
+
+.character-primary {
+    font-weight: bold;
+    color: var(--color-purple);
+}
+
+pre,
+code {
+    width: 100%;
+}
+
+code {
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-family: var(--font-code);
+}

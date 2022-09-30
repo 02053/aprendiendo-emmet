@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Aprendiendo Emmet</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="og:type" content="website">
+        <meta name="theme-color" content="#171c28">
+        <link rel="icon" href="./assets/gato.png">
+        <link rel="apple-touch-icon" href="./assets/gato.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/tokyo-night-dark.min.css"
+            integrity="sha512-dSQLLtgaq2iGigmy9xowRshaMzUHeiIUTvJW/SkUpb1J+ImXOPNGAI7ZC8V5/PiN/XN83B8uIk4qET7AMhdC5Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <main>
+
+<h1 id="que-es-span-classtext-primaryemmetspan">Que es <span class="text-primary">Emmet</span></h1>
+<hr>
+<p>Emmet es una herramiento que nos ayuda a escribir HTML y CSS de forma mas rapida.</p>
+<section>
+
+<h2 id="nodos-hijos">Nodos hijos</h2>
+<p>Usamos el <span class="character-primary">&gt;</span>.</p>
+<pre><code class="language-html">nav&gt;ul&gt;li
+
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+</section>
+
+<section>
+
+<h2 id="nodos-hermanos">Nodos Hermanos</h2>
+<p>Usamos el <span class="character-primary">+</span>.</p>
+<pre><code class="language-html">h1+p+section
+
+&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;section&gt;&lt;/section&gt;</code></pre>
+</section>
+
+<section>
+
+<h2 id="nodos-superiores">Nodos superiores</h2>
+<p>Usamos el <span class="character-primary">^</span>.</p>
+<pre><code class="language-html">ul&gt;li&gt;a^li&gt;span
+
+&lt;ul&gt;
+    &lt;li&gt;&lt;a&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+nav&gt;ul&gt;li&gt;a^^^main&gt;section
+
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+    &lt;section&gt;&lt;/section&gt;
+&lt;/main&gt;</code></pre>
+</section>
+
+<section>
+
+<h2 id="multiplicadores">Multiplicadores</h2>
+<p>Usamos el <span class="character-primary">*</span>.</p>
+<pre><code class="language-html">nav&gt;ul&gt;li*5
+
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+</section>
+
+<section>
+
+<h2 id="agrupacion">Agrupacion</h2>
+<p>Usamos el <span class="character-primary">( )</span>.</p>
+<pre><code class="language-html">main&gt;section&gt;(h2&gt;span)+p
+
+&lt;main&gt;
+    &lt;section&gt;
+        &lt;h2&gt;&lt;span&gt;&lt;/span&gt;&lt;/h2&gt;
+        &lt;p&gt;&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+</section>
+
+<section>
+
+<h2 id="atributos-id-y-class">Atributos id y class</h2>
+<p>Usamos el <span class="character-primary">#</span> para los id y el <span class="character-primary">.</span> para class.</p>
+<pre><code class="language-html">nav&gt;li.item-menu*3&gt;a#link
+
+&lt;nav&gt;
+    &lt;li class=&quot;item-menu&quot;&gt;&lt;a href=&quot;&quot; id=&quot;link&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;item-menu&quot;&gt;&lt;a href=&quot;&quot; id=&quot;link&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;item-menu&quot;&gt;&lt;a href=&quot;&quot; id=&quot;link&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/nav&gt;</code></pre>
+</section>
+
+<section>
+
+<h2 id="atributos-html">Atributos HTML</h2>
+<p>Usamos el <span class="character-primary">[ ]</span>.</p>
+<pre><code class="language-html">ul&gt;li*3&gt;a[target=&quot;_blank&quot;]
+
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+ul&gt;li*3&gt;a[target=&quot;_blank&quot; role=&quot;link&quot;]
+
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot; role=&quot;link&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot; role=&quot;link&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot; role=&quot;link&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</section>
+
+<section>
+
+<h2 id="elementos-enumerados">Elementos enumerados</h2>
+<p>Usamos el <span class="character-primary">$</span>.</p>
+<pre><code class="language-html">nav&gt;ul&gt;li.item-$*5
+
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;item-1&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-2&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-3&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-4&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-5&quot;&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+</section>
+
+<section>
+
+<h2 id="elementos-enumerados-personalizados">Elementos enumerados personalizados</h2>
+<p>Usamos el <span class="character-primary">@</span>.</p>
+<pre><code class="language-html">nav&gt;ul&gt;li.item-$@100*4
+
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;item-100&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-101&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-102&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;item-103&quot;&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+</section>
+
+<section>
+
+<h2 id="contenido-html">Contenido HTML</h2>
+<p>Usamos el <span class="character-primary">{ }</span>.</p>
+<pre><code class="language-html">h1{Estamos aprendiendo Emmet}
+
+&lt;h1&gt;Estamos aprendiendo Emmet&lt;/h1&gt;
+
+nav&gt;ul&gt;li*4{Seccion $}
+
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Seccion 1&lt;/li&gt;
+        &lt;li&gt;Seccion 2&lt;/li&gt;
+        &lt;li&gt;Seccion 3&lt;/li&gt;
+        &lt;li&gt;Seccion 4&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+</section>
+
+</main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"
+        integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            hljs.highlightAll()
+        </script>
+    </body>
+</html>
